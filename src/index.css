@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'basheq';
+  src: url('/fonts/basheq.otf') format('truetype');
+  font-display: swap;
+}
+:root {
+  --var-basheq: 'basheq';
+}
