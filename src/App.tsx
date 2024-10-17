@@ -4,11 +4,13 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <main className="font-basheq">
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 }
 
