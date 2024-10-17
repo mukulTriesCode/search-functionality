@@ -1,0 +1,11 @@
+.heading {
+  font-size: clamp(2rem, calc(2rem + 5vw), 6rem);
+}
+
+.work-heading {
+  font-size: clamp(3rem, calc(3rem + 2vw), 5rem);
+}
+
+.current-work-heading {
+  font-size: clamp(1.75rem, calc(1.75rem + 2vw), 2.5rem);
+}

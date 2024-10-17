@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: 'basheq';
-  src: url('/fonts/basheq.otf') format('truetype');
+  font-family: "basheq";
+  src: url("/fonts/basheq.otf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces.ttf") format("truetype");
   font-display: swap;
 }
 :root {
-  --var-basheq: 'basheq';
+  --var-basheq: "basheq";
+  --var-fraunces: "Fraunces";
 }

@@ -10,6 +10,7 @@ export default {
       },
       fontFamily: {
         basheq: "var(--var-basheq)",
+        fraunces: "var(--var-fraunces)",
       },
       container: {
         center: true,

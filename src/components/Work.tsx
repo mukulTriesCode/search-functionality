@@ -17,7 +17,7 @@ const Work: React.FC = () => {
 
   return (
     <section className="container text-center my-20 text-light">
-      <h2 className="text-8xl relative">
+      <h2 className="heading relative">
         Selected{" "}
         <span className="underline decoration-primary underline-offset-[1rem] decoration-4">
           Work
@@ -39,7 +39,7 @@ const Work: React.FC = () => {
             style={{ listStyleType: "none" }}
           >
             <summary
-              className="text-7xl my-9 mb-11 group"
+              className="work-heading my-9 mb-11 group"
               style={{ listStyleType: "none" }}
             >
               <span className="w-24 inline-block text-primary">
@@ -60,7 +60,7 @@ const Work: React.FC = () => {
               </span>
             </summary>
             <div className="ps-24">
-              <p className="text-3xl my-9 mb-11">
+              <p className="text-3xl my-9 mb-11 font-fraunces font-light">
                 Code editor is created using React + TS with Redux Toolkit for
                 state management
               </p>
