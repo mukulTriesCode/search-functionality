@@ -3,15 +3,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AnimatedCursor from "react-animated-cursor";
 import useMobile from "./hooks/useMobile";
+import Music from "./pages/Music";
+import WorkPage from "./pages/Work";
 
 function App() {
   const isMobile = useMobile();
-  console.log("isMobile", isMobile);
   return (
     <main className="font-basheq">
       <BrowserRouter>
         <Routes>
           <Route index path="/" element={<Home />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="*" element={<>404</>} />
         </Routes>
       </BrowserRouter>
       {!isMobile && (
