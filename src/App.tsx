@@ -38,6 +38,7 @@ function App() {
             "textarea",
             "button",
             ".link",
+            "summary",
           ]}
         />
       )}
