@@ -3,7 +3,7 @@ import React from "react";
 const Heading: React.FC = () => {
   return (
     <section className="container text-light my-20 text-center">
-      <h1 className="text-8xl relative">
+      <h1 className="heading relative">
         Enter the{" "}
         <span className="underline decoration-primary underline-offset-[1rem] decoration-4">
           Realm
