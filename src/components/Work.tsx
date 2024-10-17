@@ -60,7 +60,7 @@ const Work: React.FC = () => {
               </span>
             </summary>
             <div className="ps-24">
-              <p className="text-3xl my-9 mb-11">
+              <p className="text-3xl my-9 mb-11 font-fraunces font-light">
                 Code editor is created using React + TS with Redux Toolkit for
                 state management
               </p>
