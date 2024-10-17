@@ -4,6 +4,7 @@ import BannerImage from "../components/BannerImage";
 import Work from "../components/Work";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import CurrentWork from "../components/CurrentWork";
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <Header />
       <Heading />
       <BannerImage />
+      <CurrentWork />
       <Work />
       <Footer />
     </main>
