@@ -14,6 +14,12 @@ export default {
       container: {
         center: true,
         padding: "1rem",
+        screens: {
+          sm: "640px",
+          md: "768px",
+          lg: "834px",
+          xl: "986px",
+        },
       },
     },
   },
