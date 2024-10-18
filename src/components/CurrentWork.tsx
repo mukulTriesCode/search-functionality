@@ -39,7 +39,7 @@ const CurrentWork: React.FC = () => {
                   <a
                     href={link.url}
                     key={linkIndex}
-                    className="font-fraunces text-primary hover:underline underline-offset-4 decoration-2 duration-300 text-[1.75rem]"
+                    className="font-fraunces text-primary hover:underline underline-offset-4 decoration-2 duration-300 text-[1.75rem] w-fit"
                   >
                     {link.name}
                   </a>
