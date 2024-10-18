@@ -5,6 +5,7 @@ export interface CurrentWorkProps {
     links?: {
       url: string;
       name: string;
+      icon: string;
     }[];
   }[];
 }
