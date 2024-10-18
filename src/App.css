@@ -2,6 +2,10 @@
   font-size: clamp(2rem, calc(2rem + 5vw), 6rem);
 }
 
+u {
+  @apply decoration-primary underline-offset-[1rem] decoration-4;
+}
+
 .work-heading {
   font-size: clamp(3rem, calc(3rem + 2vw), 5rem);
 }
