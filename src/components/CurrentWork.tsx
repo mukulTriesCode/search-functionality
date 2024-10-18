@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie-player";
-import animationData from "../../public/sphere.json";
+import animationData from "../assets/sphere.json";
 import { CurrentWorkProps } from "../utils/types";
 
 const CurrentWork: React.FC<CurrentWorkProps> = ({ currentWorkData }) => {
