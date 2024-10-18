@@ -1,6 +1,7 @@
 import React from "react";
+import { WorkData } from "../utils/types";
 
-const Work: React.FC = () => {
+const Work: React.FC<{ workData: WorkData }> = ({ workData }) => {
   const lookup: [string, number][] = [
     ["X", 10],
     ["IX", 9],
@@ -17,55 +18,56 @@ const Work: React.FC = () => {
 
   return (
     <section className="container text-center my-20 text-light">
-      <h2 className="heading relative">
-        Selected{" "}
-        <span className="underline decoration-primary underline-offset-[1rem] decoration-4">
-          Work
-        </span>
-        <span className="absolute -z-10 left-1/2 -translate-x-1/2 ">
-          <img
-            src="https://stordahl.dev/images/squiggle/6.svg"
-            alt="squiggle"
-          />
-        </span>
-      </h2>
+      {workData?.title && (
+        <div className="relative">
+          <h2
+            className="heading relative"
+            dangerouslySetInnerHTML={{ __html: workData?.title }}
+          ></h2>
+          <span className="absolute -z-10 left-1/2 top-0 -translate-x-1/2 ">
+            <img src="./images/squiggle-6.svg" alt="squiggle" />
+          </span>
+        </div>
+      )}
       <div className="mt-20 text-start">
-        {[...Array(4)].map((_, i, arr) => (
-          <details
-            key={i}
-            className={`border-t-2 border-primary ${
-              i === arr.length - 1 ? "border-b-2" : ""
-            }`}
-            style={{ listStyleType: "none" }}
-          >
-            <summary
-              className="work-heading my-9 mb-11 group"
-              style={{ listStyleType: "none" }}
-            >
-              <span className="w-24 inline-block text-primary">
-                {toRomanNumeral(i + 1)}.
-              </span>
-              <span className="relative">
-                React Code Editor
-                <span
-                  className={`absolute -z-10 left-1/2 -translate-x-1/2 duration-300 opacity-0 group-hover:opacity-100 ${
-                    i === arr.length - 1 ? "-top-1/2" : ""
-                  }`}
+        {workData?.projects.map((project, i, projectArr) => (
+          <React.Fragment key={project?.title}>
+            {project?.title && (
+              <details
+                className={`border-t-2 border-primary ${
+                  i === projectArr.length - 1 ? "border-b-2" : ""
+                }`}
+                style={{ listStyleType: "none" }}
+              >
+                <summary
+                  className="work-heading my-9 mb-11 group"
+                  style={{ listStyleType: "none" }}
                 >
-                  <img
-                    src={`https://stordahl.dev/images/squiggle/${i + 1}.svg`}
-                    alt="squiggle"
-                  />
-                </span>
-              </span>
-            </summary>
-            <div className="ps-24">
-              <p className="text-3xl my-9 mb-11 font-fraunces font-light">
-                Code editor is created using React + TS with Redux Toolkit for
-                state management
-              </p>
-            </div>
-          </details>
+                  <span className="w-24 inline-block text-primary">
+                    {toRomanNumeral(i + 1)}.
+                  </span>
+                  <span className="relative">
+                    {project?.title}
+                    <span
+                      className={`absolute -z-10 left-1/2 -translate-x-1/2 duration-300 opacity-0 group-hover:opacity-100 scale-105`}
+                    >
+                      <img
+                        src={`./images/squiggle-${i + 1}.svg`}
+                        alt="squiggle"
+                      />
+                    </span>
+                  </span>
+                </summary>
+                {project?.description && (
+                  <div className="ps-24">
+                    <p className="text-3xl my-9 font-fraunces font-light">
+                      {project?.description}
+                    </p>
+                  </div>
+                )}
+              </details>
+            )}
+          </React.Fragment>
         ))}
       </div>
     </section>
