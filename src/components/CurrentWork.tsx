@@ -1,4 +1,6 @@
 import React from "react";
+import Lottie from "react-lottie-player";
+import animationData from "../../public/sphere.json"; // Import the JSON file
 
 const CurrentWork: React.FC = () => {
   const data = [
@@ -51,10 +53,12 @@ const CurrentWork: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="w-2/5 h-fit top-10 sticky">
-        <img
-          src="https://cdn.dribbble.com/users/776205/screenshots/3857304/media/ebcb3befb35eeb78c0466d06ff244d25.gif"
-          alt=""
+      <div className="w-2/5 flex">
+        <Lottie
+          animationData={animationData}
+          speed={1}
+          loop
+          play
         />
       </div>
     </section>
