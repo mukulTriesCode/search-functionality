@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       </h5>
       <div className="flex gap-5">
         {headerData?.navLinks.map((val) => (
-          <Link key={val?.url} className="cursor-none" to={val?.url}>
+          <Link key={val?.url} className="cursor-none hover:underline decoration-2 underline-offset-4" to={val?.url}>
             {val?.label}
           </Link>
         ))}

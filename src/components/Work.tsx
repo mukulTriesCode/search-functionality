@@ -23,10 +23,7 @@ const Work: React.FC = () => {
           Work
         </span>
         <span className="absolute -z-10 left-1/2 -translate-x-1/2 ">
-          <img
-            src="https://stordahl.dev/images/squiggle/6.svg"
-            alt="squiggle"
-          />
+          <img src="./images/squiggle-6.svg" alt="squiggle" />
         </span>
       </h2>
       <div className="mt-20 text-start">
@@ -48,19 +45,14 @@ const Work: React.FC = () => {
               <span className="relative">
                 React Code Editor
                 <span
-                  className={`absolute -z-10 left-1/2 -translate-x-1/2 duration-300 opacity-0 group-hover:opacity-100 ${
-                    i === arr.length - 1 ? "-top-1/2" : ""
-                  }`}
+                  className={`absolute -z-10 left-1/2 -translate-x-1/2 duration-300 opacity-0 group-hover:opacity-100 scale-105`}
                 >
-                  <img
-                    src={`https://stordahl.dev/images/squiggle/${i + 1}.svg`}
-                    alt="squiggle"
-                  />
+                  <img src={`./images/squiggle-${i + 1}.svg`} alt="squiggle" />
                 </span>
               </span>
             </summary>
             <div className="ps-24">
-              <p className="text-3xl my-9 mb-11 font-fraunces font-light">
+              <p className="text-3xl my-9 font-fraunces font-light">
                 Code editor is created using React + TS with Redux Toolkit for
                 state management
               </p>
