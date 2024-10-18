@@ -18,16 +18,25 @@ const headerData = {
 const Header: React.FC = () => {
   return (
     <header className="container py-5 border-b text-3xl flex justify-between text-light font-fraunces">
-      <h5>
-        <Link className="cursor-none" to="/">
-          {headerData?.title}
-        </Link>
-      </h5>
+      {headerData?.title && (
+        <h5>
+          <Link className="cursor-none" to="/">
+            {headerData?.title}
+          </Link>
+        </h5>
+      )}
       <div className="flex gap-5">
         {headerData?.navLinks.map((val) => (
-          <Link key={val?.url} className="cursor-none hover:underline decoration-2 underline-offset-4" to={val?.url}>
-            {val?.label}
-          </Link>
+          <React.Fragment key={val?.url}>
+            {val?.label && (
+              <Link
+                className="cursor-none hover:underline decoration-2 underline-offset-4"
+                to={val?.url}
+              >
+                {val?.label}
+              </Link>
+            )}
+          </React.Fragment>
         ))}
       </div>
     </header>

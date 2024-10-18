@@ -26,7 +26,9 @@ const CurrentWork: React.FC = () => {
       <div className="flex flex-col gap-9 w-3/5">
         {data.map((item, index) => (
           <div key={index}>
-            <h2 className="current-work-heading mb-4">{item.title}</h2>
+            {item?.title && (
+              <h2 className="current-work-heading mb-4">{item.title}</h2>
+            )}
             {item.description && (
               <p
                 className="font-fraunces font-light text-[1.75rem] [&_span]:text-primary"
