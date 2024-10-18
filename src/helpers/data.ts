@@ -13,16 +13,53 @@ export const headerData = {
 };
 
 export const homepage = {
-  title: "Enter the <u>Realm</u><br />Of Frontend",
-  bannerImage:
-    "https://images.unsplash.com/photo-1598559411608-e6dddb68e5f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  title: "Enter the <u>Realm</u> <br />Of Frontend",
+  bannerImage: "./images/home-banner.avif",
 };
 
 export const workPage = {
   title: "<u>Skills</u> and<br />Work",
-  bannerImage:
-    "https://images.unsplash.com/photo-1599680756838-307f6d3c4ada?q=80&w=1940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  bannerImage: "./images/work-banner.avif",
 };
+
+export const metaFields = [
+  { name: "title", content: "Mukul Sharma - Portfolio Website" },
+  {
+    name: "description",
+    content:
+      "Explore Mukul Sharma's portfolio, featuring his latest projects, work experiences, and skillset. You can reach out for frontend-related work",
+  },
+  {
+    name: "keywords",
+    content: "Mukul Sharma, Portfolio, Projects, Work Experiences",
+  },
+  { name: "author", content: "Mukul Sharma" },
+  { name: "og:title", content: "Mukul Sharma Portfolio" },
+  {
+    name: "og:description",
+    content:
+      "Explore Mukul Sharma's portfolio, featuring his latest projects, work experiences, and skillset. You can reach out for frontend-related work",
+  },
+  {
+    name: "og:image",
+    content: "https://mukul-sharma.vercel.app/images/home-banner.avif",
+  },
+  { name: "og:url", content: "https://mukul-sharma.vercel.app/" },
+  { name: "og:type", content: "website" },
+  { name: "twitter:card", content: "summary" },
+  { name: "twitter:site", content: "@mukulTriesCode" },
+  { name: "twitter:title", content: "Mukul Sharma Portfolio" },
+  {
+    name: "twitter:description",
+    content:
+      "Explore Mukul Sharma's portfolio, featuring his latest projects, work experiences, and skillset. You can reach out for frontend-related work",
+  },
+  {
+    name: "twitter:image",
+    content: "https://mukul-sharma.vercel.app/images/home-banner.avif",
+  },
+  { name: "robots", content: "index, follow" },
+];
 
 export const currentWorkData = [
   {
