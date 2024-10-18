@@ -1,45 +1,7 @@
 import React from "react";
+import { SkillData } from "../utils/types";
 
-const skillData = [
-  {
-    label: "Skills",
-    data: [
-      {
-        label: "Frontend",
-        technologies: [
-          { label: "HTML", logo: "" },
-          { label: "CSS", logo: "" },
-          { label: "SASS", logo: "" },
-          { label: "BootStrap", logo: "" },
-          { label: "Tailwind CSS", logo: "" },
-          { label: "JavaScript", logo: "" },
-          { label: "TypeScript", logo: "" },
-          { label: "ReactJS", logo: "" },
-          { label: "NextJS", logo: "" },
-          { label: "Redux", logo: "" },
-        ],
-      },
-      {
-        label: "Headless CMS",
-        technologies: [
-          { label: "Prismic", logo: "" },
-          { label: "Sanity", logo: "" },
-        ],
-      },
-      {
-        label: "API",
-        technologies: [
-          { label: "Axios", logo: "" },
-          { label: "GraphQL", logo: "" },
-          { label: "Postman", logo: "" },
-          { label: "Insomnia", logo: "" },
-        ],
-      },
-    ],
-  },
-];
-
-const Skills: React.FC = () => {
+const Skills: React.FC<{ skillData: SkillData[] }> = ({ skillData }) => {
   return (
     <section className="container my-20">
       {skillData.map((skill) => (

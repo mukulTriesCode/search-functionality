@@ -1,32 +1,7 @@
 import React from "react";
+import { WorkData } from "../utils/types";
 
-const workData = {
-  title: "Selected <u>Work</u>",
-  projects: [
-    {
-      title: "React Code Editor",
-      description:
-        "Code editor is created using React + TS with Redux Toolkit for state management",
-    },
-    {
-      title: "E-commerce Website",
-      description:
-        "E-commerce website built using React, Redux, and Firebase for authentication and database management",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "Portfolio website created using React, Redux, and CSS for styling and animations",
-    },
-    {
-      title: "Chatbot Application",
-      description:
-        "Chatbot application developed using React, Redux, and Dialogflow for conversational AI",
-    },
-  ],
-};
-
-const Work: React.FC = () => {
+const Work: React.FC<{ workData: WorkData }> = ({ workData }) => {
   const lookup: [string, number][] = [
     ["X", 10],
     ["IX", 9],

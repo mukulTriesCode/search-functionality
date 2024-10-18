@@ -1,32 +1,13 @@
 import React from "react";
 import Lottie from "react-lottie-player";
-import animationData from "../../public/sphere.json"; // Import the JSON file
+import animationData from "../../public/sphere.json";
+import { CurrentWorkProps } from "../utils/types";
 
-const CurrentWork: React.FC = () => {
-  const data = [
-    {
-      title: "Currently",
-      description:
-        "I’m a <span>Frontend</span> Developer at RW Infotech, an Headless CMS experts company.",
-    },
-    {
-      title: "Availability",
-      description: "I’m currently available to work togather.",
-    },
-    {
-      title: "Links",
-      links: [
-        { name: "Github", url: "#" },
-        { name: "Twitter", url: "#" },
-        { name: "LinkedIn", url: "#" },
-      ],
-    },
-  ];
-
+const CurrentWork: React.FC<CurrentWorkProps> = ({ currentWorkData }) => {
   return (
     <section className="container my-20 text-light flex">
       <div className="flex flex-col gap-9 w-3/5">
-        {data.map((item, index) => (
+        {currentWorkData.map((item, index) => (
           <div key={index}>
             {item?.title && (
               <h2 className="current-work-heading mb-4">{item.title}</h2>
@@ -54,12 +35,7 @@ const CurrentWork: React.FC = () => {
         ))}
       </div>
       <div className="w-2/5 flex">
-        <Lottie
-          animationData={animationData}
-          speed={1}
-          loop
-          play
-        />
+        <Lottie animationData={animationData} speed={1} loop play />
       </div>
     </section>
   );

@@ -1,21 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HeaderData } from "../utils/types";
 
-const headerData = {
-  title: "Mukul Sharma",
-  navLinks: [
-    {
-      label: "work",
-      url: "/work",
-    },
-    {
-      label: "music",
-      url: "/music",
-    },
-  ],
-};
-
-const Header: React.FC = () => {
+const Header: React.FC<{ headerData: HeaderData }> = ({ headerData }) => {
   return (
     <header className="container py-5 border-b text-3xl flex justify-between text-light font-fraunces">
       {headerData?.title && (

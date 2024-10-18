@@ -4,6 +4,7 @@ import AnimatedCursor from "react-animated-cursor";
 import useMobile from "../hooks/useMobile";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
+import { headerData } from "../helpers/data";
 
 const Layout: React.FC = () => {
   const isMobile = useMobile();
@@ -16,7 +17,7 @@ const Layout: React.FC = () => {
           style={{ backgroundImage: "url('./noise.svg')" }}
         ></div>
       </div>
-      <Header />
+      <Header headerData={headerData} />
       <Outlet />
       {!isMobile && (
         <AnimatedCursor
