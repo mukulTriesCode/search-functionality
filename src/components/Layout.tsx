@@ -3,7 +3,7 @@ import Header from "./Header";
 import AnimatedCursor from "react-animated-cursor";
 import useMobile from "../hooks/useMobile";
 import { Outlet } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Footer from "./Footer";
 import { headerData, metaFields } from "../helpers/data";
 
@@ -11,7 +11,7 @@ const Layout: React.FC = () => {
   const isMobile = useMobile();
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         {metaFields.map((field, index) => (
           <meta key={index} name={field.name} content={field.content} />
@@ -52,7 +52,7 @@ const Layout: React.FC = () => {
         )}
         <Footer />
       </main>
-    </>
+    </HelmetProvider>
   );
 };
 
