@@ -65,18 +65,18 @@ export const currentWorkData = [
   {
     title: "Currently",
     description:
-      "I’m a <span>Frontend</span> Developer at RW Infotech, an Headless CMS experts company.",
+      "I’m a <span>Frontend</span> Developer at RW Infotech, an Headless CMS expert company.",
   },
+  // {
+  //   title: "Availability",
+  //   description: "I’m currently available to work togather.",
+  // },
   {
-    title: "Availability",
-    description: "I’m currently available to work togather.",
-  },
-  {
-    title: "Links",
+    // title: "Links",
     links: [
-      { name: "Github", url: "#" },
-      { name: "Twitter", url: "#" },
-      { name: "LinkedIn", url: "#" },
+      { name: "Github", url: "#", icon: "./logos/maximize.png" },
+      { name: "LinkedIn", url: "#", icon: "./logos/maximize.png" },
+      { name: "Twitter", url: "#", icon: "./logos/maximize.png" },
     ],
   },
 ];
